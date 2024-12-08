@@ -1,6 +1,7 @@
 import java.security.SecureRandom;
 
 class contrasena {
+    public static char[] getPassw;
     private int longitud=8;
     private String passw;
 
@@ -39,7 +40,7 @@ class contrasena {
         return aux.toString();
     }
     public String datos(){
-        return getPassw()+" "+getLongitud()+" "+(esFuerte(passw)?"Fuerte":"Devil");
+        return " Contrasena: "+getPassw()+" longitud: "+getLongitud()+" "+(esFuerte(passw)?"Fuerte":"Devil");
     }
     public boolean esFuerte(String passw){
 
