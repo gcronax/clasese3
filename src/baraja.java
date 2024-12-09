@@ -7,7 +7,7 @@ class Baraja {
     private ArrayList<Carta> cartas;
     private ArrayList<Carta> cartasMonton;
 
-    private static class Carta {
+    static class Carta {
         private String palo;
         private int n;
 
@@ -70,7 +70,6 @@ class Baraja {
         for (int i = 0; i < cantidad; i++) {
             repartidas.add(siguienteCarta());
         }
-        
         return repartidas;
     }
 

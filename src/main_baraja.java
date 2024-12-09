@@ -1,5 +1,4 @@
 
-
 public class main_baraja {
     public static void main(String[] args) {
         Baraja baraja = new Baraja();
@@ -9,9 +8,10 @@ public class main_baraja {
         System.out.println("Sacar una carta: " + baraja.siguienteCarta());
 
         System.out.println("Sacar 8 cartas mas:");
-        System.out.println(baraja.darCartas(8));
-       
         
+        for (Baraja.Carta carta : baraja.darCartas(8)) {
+            System.out.println(carta);
+        }
         
         System.out.println("Volver a mostrar las cartas disponibles (" + baraja.cartasDisponibles()+")");
 
@@ -21,7 +21,10 @@ public class main_baraja {
         baraja.barajar();
 
         System.out.println("Sacar 5 cartas:");
-        System.out.println(baraja.darCartas(5));
+        
+        for (Baraja.Carta carta : baraja.darCartas(5)) {
+            System.out.println(carta);
+        }
 
         
         System.out.println("Mostrar las cartas sacadas después de barajar.");
