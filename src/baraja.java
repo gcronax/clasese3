@@ -66,11 +66,11 @@ class Baraja {
             System.out.println("No hay suficientes cartas para repartir.");
             return null;
         }
-        ArrayList<Carta> repartidas = new ArrayList<>();
+        ArrayList<Carta> aux = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            repartidas.add(siguienteCarta());
+            aux.add(siguienteCarta());
         }
-        return repartidas;
+        return aux;
     }
 
     public void cartasMonton() {
