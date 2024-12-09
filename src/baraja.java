@@ -61,13 +61,13 @@ class Baraja {
         return cartas.size();
     }
 
-    public ArrayList<Carta> darCartas(int cantidad) {
-        if (cantidad > cartas.size()) {
+    public ArrayList<Carta> darCartas(int n) {
+        if (n > cartas.size()) {
             System.out.println("No hay suficientes cartas para repartir.");
             return null;
         }
         ArrayList<Carta> repartidas = new ArrayList<>();
-        for (int i = 0; i < cantidad; i++) {
+        for (int i = 0; i < n; i++) {
             repartidas.add(siguienteCarta());
         }
         return repartidas;
