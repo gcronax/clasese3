@@ -14,10 +14,10 @@ public class main_baraja {
         }
         
         System.out.println("Volver a mostrar las cartas disponibles (" + baraja.cartasDisponibles()+")");
-
+        System.out.println("Mostrar las cartas sacadas hasta el momento.");
         baraja.cartasMonton();
 
-        System.out.println("Barajando la baraja...");
+        System.out.println("Barajar");
         baraja.barajar();
 
         System.out.println("Sacar 5 cartas:");
