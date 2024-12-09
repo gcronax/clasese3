@@ -26,8 +26,10 @@ public class main_baraja {
             System.out.println(carta);
         }
 
-        
         System.out.println("Mostrar las cartas sacadas después de barajar.");
         baraja.cartasMonton();
+
+        System.out.println("Estas son las cartas que quedan: ");
+        baraja.mostrarBaraja();
     }
 }

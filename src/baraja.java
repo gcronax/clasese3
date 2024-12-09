@@ -4,12 +4,12 @@ import java.util.Random;
 
 
 class Baraja {
-    private ArrayList<Carta> cartas;
-    private ArrayList<Carta> cartasMonton;
+    private final ArrayList<Carta> cartas;
+    private final ArrayList<Carta> cartasMonton;
 
     static class Carta {
-        private String palo;
-        private int n;
+        private final String palo;
+        private final int n;
 
         public Carta(String palo, int n) {
             this.palo = palo;
@@ -88,7 +88,6 @@ class Baraja {
         if (cartas.isEmpty()) {
             System.out.println("No quedan cartas en la baraja.");
         } else {
-            System.out.println("Cartas restantes en la baraja: ");
             for (Carta carta : cartas) {
                 System.out.println(carta);
             }
