@@ -6,7 +6,7 @@ public class main_contrasena {
         try (Scanner scan = new Scanner(System.in)) {
             System.out.print("dame el numero de contraseñas que quieras: ");
             int n=scan.nextInt();
-            contrasena array[]=new contrasena[n];
+            contrasena[] array=new contrasena[n];
             
             for (int i = 0; i < n; i++) {
                 System.out.print("Introduce longitud para la contraseña " + (i + 1) + ": ");
