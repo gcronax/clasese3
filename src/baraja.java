@@ -1,24 +1,25 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 
-class Carta {
-    private String palo;
-    private int n;
 
-    public Carta(String palo, int n) {
-        this.palo = palo;
-        this.n = n;
-    }
-
-    public String toString() {
-        return n + " de " + palo;
-    }
-}
 
 class Baraja {
     private ArrayList<Carta> cartas;
     private ArrayList<Carta> cartasMonton;
+
+    private static class Carta {
+        private String palo;
+        private int n;
+
+        public Carta(String palo, int n) {
+            this.palo = palo;
+            this.n = n;
+        }
+
+        public String toString() {
+            return n + " de " + palo;
+        }
+    }
 
     public Baraja() {
         this.cartas = new ArrayList<>();
@@ -35,7 +36,6 @@ class Baraja {
     }
 
     public void barajar() {
-        Collections.shuffle(cartas);
 
         for (int i = cartas.size() - 1; i > 0; i--) {
            
@@ -52,7 +52,7 @@ class Baraja {
             System.out.println("No quedan cartas en la baraja.");
             return null;
         }
-        Carta carta = cartas.remove(0);
+        Carta carta = cartas.removeFirst();
         cartasMonton.add(carta);
         return carta;
     }
@@ -70,6 +70,7 @@ class Baraja {
         for (int i = 0; i < cantidad; i++) {
             repartidas.add(siguienteCarta());
         }
+        
         return repartidas;
     }
 
